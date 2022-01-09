@@ -1,7 +1,9 @@
 package com.example.a2_activity_1_test;
 
+import android.content.Context;
 
 public class AdventureMovies {
+
     String[] movieNames = {
             "Big Buck Bunny",
             "Elephants Dream"
@@ -14,6 +16,8 @@ public class AdventureMovies {
             "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny",
             "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
     };
+
+//    String title = getString(R.string.)
 
     public AdventureMovies() {
 

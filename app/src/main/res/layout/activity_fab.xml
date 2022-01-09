@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fab_Activity"
+    android:background="@color/teal_700">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/DeveloperName"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DeveloperEmail"
+        android:id="@+id/email"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/title">
+    </TextView>
+    <TextView
+        android:id="@+id/PhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="01007964446"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        android:layout_below="@id/email"/>
+</RelativeLayout>

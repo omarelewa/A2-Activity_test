@@ -22,4 +22,17 @@
     <string name="ForBiggerJoyrides_uri">http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4</string>
     <string name="ForBiggerJoyrides_title">For Bigger Joyrides</string>
     <string name="log">Genre Name, on the new activity</string>
+    <string name="info">info</string>
+    <string name="DeveloperInformation">Developer Information</string>
+    <string name="title_activity_fab">Fab</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="DeveloperName">Omar Ahmed Elewa</string>
+    <string name="DeveloperEmail">elewa97@aucegypt.edu</string>
 </resources>

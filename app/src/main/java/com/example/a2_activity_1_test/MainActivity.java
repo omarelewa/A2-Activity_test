@@ -8,6 +8,7 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import com.example.a2_activity_1_test.R;
 import com.example.a2_activity_1_test.CustomGenreList;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        Intent intent2 = new Intent(MainActivity.this, Fab_Activity.class);
 
         //String newVideoPath = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
 
@@ -54,7 +57,13 @@ public class MainActivity extends AppCompatActivity {
         CustomGenreList customGenreList = new CustomGenreList(this, genres, imageId);
         listView.setAdapter(customGenreList);
 
-
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent2);
+            }
+        });
 
         listView.setOnItemClickListener((adapterView, view, position, l) -> {
             intent.putExtra(MainActivity2.EXTRA_MESSAGE, genres[position - 1]);

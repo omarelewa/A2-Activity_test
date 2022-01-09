@@ -8,9 +8,13 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -102,6 +106,16 @@ public class MainActivity2 extends AppCompatActivity {
                 listView.setAdapter(customMovieList);
                 break;
         }
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Developed by Omar Elewa", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
 
         listView.setOnItemClickListener((adapterView, view, position, l) -> {
             Intent intent2 = new Intent(Intent.ACTION_VIEW,
