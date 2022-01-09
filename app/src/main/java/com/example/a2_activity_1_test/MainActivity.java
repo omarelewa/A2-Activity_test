@@ -11,6 +11,7 @@ import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import com.example.a2_activity_1_test.R;
 import com.example.a2_activity_1_test.CustomGenreList;
@@ -29,15 +30,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
 
-        String newVideoPath = "https://www.youtube.com/watch?v=dPHucTXzQ3Q";
+        //String newVideoPath = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
 
 
 
-        Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse(newVideoPath));
-        intent.setDataAndType(Uri.parse(newVideoPath), "video/*");
+        //Intent intent = new Intent(Intent.ACTION_VIEW,
+        //        Uri.parse(newVideoPath));
+        //intent.setDataAndType(Uri.parse(newVideoPath), "video/*");
 
 
         // Setting the header
@@ -53,11 +54,11 @@ public class MainActivity extends AppCompatActivity {
         CustomGenreList customGenreList = new CustomGenreList(this, genres, imageId);
         listView.setAdapter(customGenreList);
 
-        //listView.setOnItemClickListener((adapterView, view, position, l) ->
-        //      Toast.makeText(getApplicationContext(), "You Selected "+ genres[position-1], Toast.LENGTH_SHORT).show());
+
+
         listView.setOnItemClickListener((adapterView, view, position, l) -> {
-            //intent.putExtra(MainActivity2.EXTRA_MESSAGE, genres[position - 1]);
-            //Log.v("Movie Genre", genres[position - 1]);
+            intent.putExtra(MainActivity2.EXTRA_MESSAGE, genres[position - 1]);
+            Log.v("Movie Genre", genres[position - 1]);
             startActivity(intent);
         });
     }

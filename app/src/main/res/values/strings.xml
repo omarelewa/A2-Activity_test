@@ -2,10 +2,24 @@
     <string name="app_name">A2-Activity-1_test</string>
     <string name="activity_title">GenresList</string>
     <string name="movie_select">Select a Movie</string>
-    <string-array name="genres_array">
-        <item>Adventures</item>
-        <item>Drama</item>
-        <item>Comedy</item>
-        <item>Sci-Fi</item>
-    </string-array>
+    <string name="activity_main_2_title"> Movies"</string>
+
+    <string name="BigBuckBunny_uri">http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny</string>
+    <string name="BigBuckBunny_title">Big Buck Bunny</string>
+
+    <string name="ElephantsDream_uri">http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4</string>
+    <string name="ElephantsDream_title">Elephants Dream</string>
+
+    <string name="ForBiggerBlazes_uri">http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4</string>
+    <string name="ForBiggerBlazes_title">For Bigger Blazes</string>
+
+    <string name="ForBiggerEscapes_uri">http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4</string>
+    <string name="ForBiggerEscapes_title">For Bigger Escapes</string>
+
+    <string name="ForBiggerFun_uri">http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4</string>
+    <string name="ForBiggerFun_title">For Bigger Fun</string>
+
+    <string name="ForBiggerJoyrides_uri">http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4</string>
+    <string name="ForBiggerJoyrides_title">For Bigger Joyrides</string>
+    <string name="log">Genre Name, on the new activity</string>
 </resources>

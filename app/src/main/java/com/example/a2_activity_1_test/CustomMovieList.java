@@ -11,14 +11,16 @@ import android.widget.TextView;
 public class CustomMovieList extends ArrayAdapter {
     private final String[] movieNames;
     private final String[] movieDuration;
+    private final String[] movieURIs;
 //    private final Integer[] imageId;
     private final Activity context;
 
-    public CustomMovieList(Activity context, String[] movieNames, String[] movieDuration){
+    public CustomMovieList(Activity context, String[] movieNames, String[] movieDuration, String[] movieURIs) {
         super(context, R.layout.activity_main_element_row_2, movieNames);
         this.context = context;
         this.movieNames = movieNames;
         this.movieDuration = movieDuration;
+        this.movieURIs = movieURIs;
 //        this.imageId = imageId;
     }
 
