@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,7 +29,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        //Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+
+        String newVideoPath = "https://www.youtube.com/watch?v=dPHucTXzQ3Q";
+
+
+
+        Intent intent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse(newVideoPath));
+        intent.setDataAndType(Uri.parse(newVideoPath), "video/*");
+
 
         // Setting the header
         TextView textView = new TextView(this);
@@ -44,8 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
         //listView.setOnItemClickListener((adapterView, view, position, l) ->
         //      Toast.makeText(getApplicationContext(), "You Selected "+ genres[position-1], Toast.LENGTH_SHORT).show());
-        listView.setOnItemClickListener((adapterView, view, position, l) ->
-                startActivity(intent)
-        );
+        listView.setOnItemClickListener((adapterView, view, position, l) -> {
+            //intent.putExtra(MainActivity2.EXTRA_MESSAGE, genres[position - 1]);
+            //Log.v("Movie Genre", genres[position - 1]);
+            startActivity(intent);
+        });
     }
 }
